@@ -15,7 +15,7 @@ resource "aws_instance" "mi_servidor" {
 }
 
 # ------------------------------------------------------
-# Define un grupo de seguridad con acceso al puerto 8080
+# Define un grupo de seguridad con acceso al puerto 8080 
 # ------------------------------------------------------
 resource "aws_security_group" "mi_grupo_de_seguridad" {
   name = "primer-servidor-sg"
