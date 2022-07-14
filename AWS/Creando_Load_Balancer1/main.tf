@@ -66,7 +66,7 @@ resource "aws_security_group" "mi_grupo_de_seguridad" {
 
   ingress {
     security_groups = [aws_security_group.alb.id]
-    description = "Acceso al puerto 8080 desde el exterior"
+    description = "Acceso al puerto 8080 desde el Load balancer"
     from_port   = 8080
     to_port     = 8080
     protocol    = "TCP"
@@ -138,7 +138,7 @@ resource "aws_lb_target_group" "this" {
 resource "aws_lb_target_group_attachment" "servidor_1" {
   target_group_arn = aws_lb_target_group.this.arn
   target_id = aws_instance.servidor_1.id
-  port = 8000
+  port = 8080
 }
 
 # -----------------------------
@@ -147,7 +147,7 @@ resource "aws_lb_target_group_attachment" "servidor_1" {
 resource "aws_lb_target_group_attachment" "servidor_2" {
   target_group_arn = aws_lb_target_group.this.arn
   target_id = aws_instance.servidor_2.id
-  port = 8000
+  port = 8080
 }
 
 # ------------------------
@@ -156,7 +156,7 @@ resource "aws_lb_target_group_attachment" "servidor_2" {
 resource "aws_lb_listener" "this" {
   load_balancer_arn = aws_lb.alb.arn
   port = 80
-  protocol = "HTTP"
+#  protocol = "HTTP"
 
   default_action {
     target_group_arn = aws_lb_target_group.this.arn

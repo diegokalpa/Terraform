@@ -1,0 +1,6 @@
+#Ignorar .terrform files por peso
+/Creando_Primer_Server_EC2/.terraform
+/Creando_Load_Balancer1/.terraform
+/Creando_Load_Balancer1/terraform.tfstate
+/Creando_Load_Balancer1/.terraform.lock.hcl
+/Creando_Load_Balancer1/terraform.tfstate.backup
