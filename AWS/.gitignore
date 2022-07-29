@@ -4,3 +4,9 @@
 /Creando_Load_Balancer1/terraform.tfstate
 /Creando_Load_Balancer1/.terraform.lock.hcl
 /Creando_Load_Balancer1/terraform.tfstate.backup
+
+/BUCLES/.terraform
+/BUCLES/.terraform
+/BUCLES/terraform.tfstate
+/BUCLES/.terraform.lock.hcl
+/BUCLES/terraform.tfstate.backup
